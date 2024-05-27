@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org" lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Inicio</title>
+		<link th:rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}">
+	</head>
+	<body>
+		<div class="container-fluid">
+			<script type="text/javascript" th:src="@{webjars/bootstrap/js/bootstrap.bundle.min.js}"></script>
+			
+			<!-- Barra de navegacion -->
+			<nav class="navbar bg-dark navbar-expand-lg" data-bs-theme="dark">
+			  <div class="container-fluid">
+				<a class="navbar-brand" href="#">
+					<img src="/image/logo-unju.png" class="img-fluid" alt="Bootstrap" width="250" height="50">
+				</a>
+			    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			    	<span class="navbar-toggler-icon"></span>
+			    </button>
+			    <div class="collapse navbar-collapse " id="navbarNav">
+			    	<ul class="navbar-nav ms-auto justify-content-around col-11">
+			        	<li class="nav-item">
+			        		<a class="nav-link active" aria-current="page" href="#">Inicio</a>
+			        	</li>
+			        	<li class="nav-item">
+			         		<a class="nav-link" href="https://www.fi.unju.edu.ar/institucional/historia.html">Acerca de</a>
+			        	</li>
+			        	<li class="nav-item">
+			          		<a class="nav-link" href="https://www.fi.unju.edu.ar/carreras/carrera-pregrado.html">Carreras</a>
+			        	</li>
+			        	<li class="nav-item">
+			          		<a class="nav-link" href="https://www.fi.unju.edu.ar/servicios/telefonos.html">Contacto</a>
+			        	</li>
+			      	</ul>
+			    </div>
+			  </div>
+			</nav>
+			
+			<!-- Encabezado -->
+			<header class="pt-2 pb-5">
+		        <div class="container-fluid bg-dark text-white">
+		            <div class="row pt-5 pb-2 bg-dark text-center text-md-start" >
+		                <div class="col-12 text-center mb-5"> 
+		                	<p class="mt-5 fs-3 text-uppercase">Bienvenido</p>
+		                    <h1 class="display-1 fw-bolder text-capitalize">Facultad de Ingeniería</h1>
+		                    <figure class="text-center">
+							  <figcaption class="blockquote-footer mt-5 fs-3 text-uppercase">
+							    Siendo proactivos, <cite title="Source Title">responsables de nuestro propio destino</cite>
+							  </figcaption>
+							</figure>
+						    <p class="mt-5 fs-3 text-uppercase">2024</p>
+		                </div>
+		            </div>
+		        </div>
+		    </header>
+			
+			<!-- Contenido principal y barra lateral -->
+			<main class="contenido-principal">
+		        <div class="row">
+				<section class="seccion1 col-md-8">
+					<div class="row g-0 bg-body-secondary position-relative">
+					  <div class="col-md-6 mb-md-0 p-md-4">
+					    <img src="/image/facultad-3.jpg" class="w-100" alt="...">
+					  </div>
+					  <div class="col-md-6 p-4 ps-md-0">
+					    <h5 class="mt-0">Historia</h5>
+					    <p>La Universidad nace el 25 de mayo de 1972 como universidad provincial 
+						y al año siguiente se transforma en Universidad Nacional. Comienza a funcionar sobre la base de 
+						cuatro carreras: Ingeniería Agronómica, Ingeniería de Minas, Ingeniería Metalúrgica e Ingeniería 
+						Química. Su propósito fue apuntalar las actividades de explotación e industrialización de los 
+						recursos naturales de Jujuy. Las tres últimas carreras mencionadas pasan a constituir la actual 
+						Facultad de Ingeniería que, con el transcurso de los años, sumó a ellas un número importante de 
+						otras carreras.</p>
+						<p>
+					    Las políticas de la Universidad Nacional de Jujuy, y especialmente de la Facultad de Ingeniería, 
+						tienden a ampliar el área de influencia y a fortalecer su acción institucional, en respuesta a la demanda 
+						social creciente de formación de recursos humanos que contribuyan al desarrollo científico, tecnológico y cultural.
+					  	</p>
+					  	<ul class="list-unstyled">
+						  <li>la Facultad se constituyó en vector de desarrollo de la provincia, por cuanto::
+						    <ul>
+						      <li>Posibilita la prosecución de estudios superiores a los jóvenes egresados del nivel medio, 
+						      facilitando a un número creciente de ellos la obtención de un título universitario, sin los 
+						      inconvenientes del desarraigo que tradicionalmente debían afrontar al trasladarse a centros
+								universitarios radicados en otras provincias.</li>
+						      <li>Por ende, aporta a la economía provincial al evitar la salida de recursos económicos asociados 
+						      con la radicación de estudiantes en otras provincias.</li>
+						      <li>Posibilita acceder a títulos universitarios a jóvenes cuya situación económica les impide estudiar 
+						      fuera de la provincia.</li>
+						      <li>Provee de profesionales de la Ingeniería a las industrias radicadas en la provincia y de profesionales 
+						      competentes a las diversas reparticiones del estado provincial.</li>
+						      <li>Incorpora a la sociedad profesionales aptos para generar emprendimientos de distinta índole.</li>
+						      <li>Mantiene fluidas relaciones institucionales con el sector productivo, las ONG, el ámbito educativo y la 
+						      administración pública provincial mediante prestaciones de servicios, el desarrollo de actividades de investigación
+						       científica y tecnológica, y la formación y capacitación de recursos humanos. A la vez, dentro de este marco,
+						        promueve sistemas de pasantías para sus docentes y alumnos.</li>
+						    </ul>
+						  </li>
+						</ul>
+					  </div>
+					</div>
+				</section>
+				
+				<aside class="col-md-4 pb-5">
+		        	<div class="py-5">
+		            <div class="accordion accordion-flush" id="accordionFlushExample">
+					  <div class="accordion-item">
+					    <h2 class="accordion-header">
+					      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+					        Biblioteca
+					      </button>
+					    </h2>
+					    <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+					      <div class="accordion-body">La Biblioteca con Estantería Abierta de la Facultad de Ingeniería, le da la más cordial bienvenida a su Página Web. Aquí usted encontrará toda la información
+					       referente a nuestra unidad, los servicios y recursos que ponemos a su disposición. Contamos con un fondo documental que cubre todas las áreas académicas, técnicas, científicas y de investigación.
+					       <a href="https://virtual.unju.edu.ar/bibliotecas/" class="card-link">Ir a</a>
+					       </div>
+					    </div>
+					  </div>
+					  <div class="accordion-item">
+					    <h2 class="accordion-header">
+					      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+					        Calendario Académico
+					      </button>
+					    </h2>
+					    <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+					      <div class="accordion-body">El Calendario Académico es el elemento determinante para la realizacion de todas las actividades de la Unidad Academica, permitiendo a cada área,
+					      a cada docente y a cada estudiante organizar el desarrollo de sus tareas.
+					      <a href="https://www.fi.unju.edu.ar/secretarias/sec-academica/calendario-academico.html" class="card-link">Ir a</a>
+					      </div>
+					    </div>
+					  </div>
+					  <div class="accordion-item">
+					    <h2 class="accordion-header">
+					      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+					        Pasantia estudiantil
+					      </button>
+					    </h2>
+					    <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+					      <div class="accordion-body">Se entiende como “Pasantía Educativa” al conjunto de actividades formativas que realicen los estudiantes en empresas y organismos públicos, o empresas 
+					      privadas con personería jurídica, sustantivamente relacionado con la propuesta curricular de los estudios cursados en unidades educativas, que se reconocen como experiencia de alto 
+					      valor pedagógico, sin carácter obligatorio.
+					      <a href="https://www.fi.unju.edu.ar/alumnos-pasantias.html" class="card-link">Ir a</a>
+					      </div>
+					    </div>
+					  </div>
+					  <div class="accordion-item">
+					    <h2 class="accordion-header">
+					      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+					        SIU Guarani
+					      </button>
+					    </h2>
+					    <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+					      <div class="accordion-body">Instructivo para alumnos
+					      <a href="https://alumnos.unju.edu.ar/unju/" class="card-link">Ir a</a>
+					      </div>
+					    </div>
+					  </div>
+					  <div class="accordion-item">
+					    <h2 class="accordion-header">
+					      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+					        Portal de tramites
+					      </button>
+					    </h2>
+					    <div id="flush-collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+					      <div class="accordion-body">En virtud del avance tecnológico y el compromiso de las autoridades por implementar mejoras en todos los ámbitos de la institución, se habilita el presente 
+					      Portal de Trámites para realizar tareas administrativas de forma digital.
+					      <a href="https://alumnos.unju.edu.ar/unju/" class="card-link">Ir a</a>
+					      </div>
+					    </div>
+					  </div>
+					</div>
+					</div>
+		        </aside>
+		        </div>
+		        
+				<section class="seccion2">
+					<div class="container py-5">
+						<h4 class="text-center">Noticias recientes</h4>
+		                <div class="row g-3">
+		                	<div class="col-lg">
+		                		<div class="card text-bg-secondary mb-3" style="width: 18rem;">
+								  <img src="/image/vacunacion.jpg" class="card-img-top" alt="...">
+								  <div class="card-body">
+								    <h5 class="card-title">Campaña de vacunación</h5>
+								    <p class="card-text">El día 29 de mayo se realizará una Jornada de Vacunación...</p>
+								    <a href="https://www.fi.unju.edu.ar/unju/4580-campana-de-vacunacion-unju-2024.html" class="btn btn-primary">Saber más</a>
+								  </div>
+								</div>
+		                	</div>
+		                	<div class="col-lg">
+		                		<div class="card text-bg-secondary mb-3" style="width: 18rem;">
+								  <img src="/image/cumple.jpeg" class="card-img-top" alt="...">
+								  <div class="card-body">
+								    <h5 class="card-title">¡52 Aniversario de nuestra querida Facultad de Ingeniería!</h5>
+								    <p class="card-text">¡Quedan todos invitados!.</p>
+								    <a href="#" class="btn btn-primary">Saber más</a>
+								  </div>
+								</div>
+		                	</div>
+		                	<div class="col-lg">
+		                		<div class="card text-bg-secondary mb-3" style="width: 18rem;">
+								  <img src="/image/Ingeniavoz.png" class="card-img-top" alt="...">
+								  <div class="card-body">
+								    <h5 class="card-title">CADI-CAEDI|Reunion Informativa</h5>
+								    <p class="card-text">El Comité Organizador del CADI-CAEDI 2024 invita a los/as estudiantes a la convocatoria de la propuesta “IngeniaVoz”...</p>
+								    <a href="https://www.fi.unju.edu.ar/alumnos-noticias/4577-reunion-informativa-ingeniavoz-24-05-16-30hs.html" class="btn btn-primary">Saber más</a>
+								  </div>
+								</div>
+		                	</div>
+		                </div>
+		             </div>
+	            </section>
+			</main>
+			
+			<!-- Pie de pagina -->
+			<footer class="bg-light pt-5 pb-2 text-white">
+				<div class="container-fluid text-center text-md-start">
+					<div class="row pt-5 pb-2 bg-dark text-center text-md-start">
+						<div class="col-xl-3 col-md-2 col-lg-3 mx-auto mt-3">
+							<p class="h3 pt-5">Facultad de Ingeniería</p>
+							<p class="text-secondary">UNju</p>
+						</div>
+						<div class="col-xl-3 col-md-2 col-lg-3 mx-auto mt-3">
+							<p class="h4">Informacion</p>
+							<hr class="mb-4">
+							<p class="text-secondary text-decoration-none">Dirección: Av. Bolivia 1239, Y4600 San Salvador de Jujuy, Jujuy</p>
+			            	<p class="text-secondary text-decoration-none">Teléfono: (0388) 422-1515</p>
+			            	<p class="text-secondary text-decoration-none">Email: consultas@unju.edu.ar</p>
+						</div>
+						<div class="col-xl-3 col-md-2 col-lg-2 mx-auto mt-3">
+							<p class="h4 font-weight-bold mb-3">Contacto</p>
+							<hr>
+							<div class="mb-3">
+								<a href="https://www.facebook.com/universidadnacionaldejujuy" class="text-secondary text-decoration-none">Facebook</a>
+							</div>
+							<div class="mb-3">
+								<a href="https://www.youtube.com/channel/UCgS9XJlKKSYI1oJ4lIOo77A" class="text-secondary text-decoration-none">YouTube</a>
+							</div>
+							<div class="mb-3">
+								<a href="https://www.instagram.com/fiunju/" class="text-secondary text-decoration-none">Instagram</a>
+							</div>
+							<div class="mb-3">
+								<a href="https://www.linkedin.com/school/facultad-de-ingenieria-unju" class="text-secondary text-decoration-none">Linkedin</a>
+							</div>
+						</div>
+						<div class="col-xs-12 pt-4">
+							<p class="text-white text-center">Copyright © 2014-2022 - Facultad de Ingeniería - UNJu</p>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+	</body>
+</html>
