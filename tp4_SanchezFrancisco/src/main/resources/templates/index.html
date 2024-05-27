@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" lang="es">
+<html xmlns:th="https://www.thymeleaf.org" lang="es">
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,9 +7,56 @@
 		<link th:rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}">
 	</head>
 	<body>
-		<script type="text/javascript" th:src="@{webjars/bootstrap/js/bootstrap.bundle.min.js}"></script>
-		<header >
-			<h1>Facultad de Ingenieria</h1>
-		</header>
+		<div class="container-fluid">
+			<script type="text/javascript" th:src="@{webjars/bootstrap/js/bootstrap.bundle.min.js}"></script>
+			
+			<!-- Barra de navegacion -->
+			<nav class="navbar bg-dark navbar-expand-lg" data-bs-theme="dark">
+			  <div class="container-fluid">
+				<a class="navbar-brand" href="#">
+					<img src="/image/logo-unju.png" class="img-fluid" alt="Bootstrap" width="250" height="50">
+				</a>
+			    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			    	<span class="navbar-toggler-icon"></span>
+			    </button>
+			    <div class="collapse navbar-collapse " id="navbarNav">
+			    	<ul class="navbar-nav ms-auto justify-content-around col-11">
+			        	<li class="nav-item">
+			        		<a class="nav-link active" aria-current="page" href="#">Inicio</a>
+			        	</li>
+			        	<li class="nav-item">
+			         		<a class="nav-link" href="https://www.fi.unju.edu.ar/institucional/historia.html">Acerca de</a>
+			        	</li>
+			        	<li class="nav-item">
+			          		<a class="nav-link" href="https://www.fi.unju.edu.ar/carreras/carrera-pregrado.html">Carreras</a>
+			        	</li>
+			        	<li class="nav-item">
+			          		<a class="nav-link" href="https://www.fi.unju.edu.ar/servicios/telefonos.html">Contacto</a>
+			        	</li>
+			      	</ul>
+			    </div>
+			  </div>
+			</nav>
+			
+			<!-- Encabezado -->
+			<header class="pt-2 pb-5">
+		        <div class="container-fluid bg-dark text-white">
+		            <div class="row pt-5 pb-2 bg-dark text-center text-md-start" >
+		                <div class="col-12 text-center mb-5"> 
+		                	<p class="mt-5 fs-3 text-uppercase">Bienvenido</p>
+		                    <h1 class="display-1 fw-bolder text-capitalize">Facultad de Ingeniería</h1>
+		                    <figure class="text-center">
+							  <figcaption class="blockquote-footer mt-5 fs-3 text-uppercase">
+							    Siendo proactivos, <cite title="Source Title">responsables de nuestro propio destino</cite>
+							  </figcaption>
+							</figure>
+						    <p class="mt-5 fs-3 text-uppercase">2024</p>
+		                </div>
+		            </div>
+		        </div>
+		    </header>
+			
+			
+		</div>
 	</body>
 </html>
