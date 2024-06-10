@@ -1,10 +1,44 @@
 <!DOCTYPE html>
-<html>
-<head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
-</head>
-<body>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
 
-</body>
+	<head data-th-replace="~{/layouts/header :: head}"></head>
+
+	<body>
+		<footer th:fragment="footer" class="bg-light pt-5 pb-2 text-white">
+			<div class="container-fluid text-center text-md-start">
+				<div class="row pt-5 pb-2 bg-dark text-center text-md-start">
+					<div class="col-xl-3 col-md-2 col-lg-3 mx-auto mt-3">
+						<p class="h3 pt-5">Facultad de Ingeniería</p>
+						<p class="text-secondary">UNju</p>
+					</div>
+					<div class="col-xl-3 col-md-2 col-lg-3 mx-auto mt-3">
+						<p class="h4">Informacion</p>
+						<hr class="mb-4">
+						<p class="text-secondary text-decoration-none">Dirección: Av. Bolivia 1239, Y4600 San Salvador de Jujuy, Jujuy</p>
+			            <p class="text-secondary text-decoration-none">Teléfono: (0388) 422-1515</p>
+			            <p class="text-secondary text-decoration-none">Email: consultas@unju.edu.ar</p>
+					</div>
+					<div class="col-xl-3 col-md-2 col-lg-2 mx-auto mt-3">
+						<p class="h4 font-weight-bold mb-3">Contacto</p>
+						<hr>
+						<div class="mb-3">
+							<a href="https://www.facebook.com/universidadnacionaldejujuy" class="text-secondary text-decoration-none">Facebook</a>
+						</div>
+						<div class="mb-3">
+							<a href="https://www.youtube.com/channel/UCgS9XJlKKSYI1oJ4lIOo77A" class="text-secondary text-decoration-none">YouTube</a>
+						</div>
+						<div class="mb-3">
+							<a href="https://www.instagram.com/fiunju/" class="text-secondary text-decoration-none">Instagram</a>
+						</div>
+						<div class="mb-3">
+							<a href="https://www.linkedin.com/school/facultad-de-ingenieria-unju" class="text-secondary text-decoration-none">Linkedin</a>
+						</div>
+					</div>
+					<div class="col-xs-12 pt-4">
+						<p class="text-white text-center">Copyright © 2014-2024 - Facultad de Ingeniería - UNJu</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
 </html>
