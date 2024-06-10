@@ -1,0 +1,9 @@
+.backcss{
+	background-image: url('../image/sample/facultad.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	min-height: 500px;
+	color: white;
+	position: relative;
+	text-shadow: 2px 2px 2px rgba(0,0,0,2);
+}

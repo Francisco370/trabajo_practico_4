@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+	<head th:fragment="head">
+		<meta charset="UTF-8">
+		<title data-th-text="${titulo}"></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link th:rel="stylesheet" data-th-href="@{/webjars/bootstrap/css/bootstrap.min.css}">
+		<link rel="stylesheet" data-th-href="@{./css/styles.css}">
+	</head>
+	<body>
+		<header th:fragment="header">
+			<nav class="navbar navbar-expand-lg navbar-light">
+				<div class="container-fluid">
+					<a class="navbar-brand" href="#">
+				      <img src="https://www.fi.unju.edu.ar/images/LOGOS-FI-UNJU/logo-fi-unju-institucional-285x159.png" alt="Logo" width="150" height="80" class="d-inline-block align-text-top">
+				    </a>
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+						data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" 
+						aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					
+					<!-- enlace navbar -->
+					<div class="collapse navbar-collapse" id="navbarNav">
+						<ul class="navbar-nav ms-auto">
+							<li class="nav-item">
+								<a class="nav-link active" aria-current="page" data-th-href="@{/inicio}">Inicio</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" data-th-href="@{/carrera/listado}">Carrera</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" data-th-href="@{/materia/listado}">Materias</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" data-th-href="@{/docente/listado}">Docentes</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" data-th-href="@{/alumno/listado}">Alumnos</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" data-th-href="@{/servicios}">Servicios</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" data-th-href="@{/contact}">Contacto</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+			<div class="container-fluid backcss">
+				<h1 class="display-1 fw-bold text-center pt-5 text-md-start ps-md-5">Facultad de ingeniería</h1>
+				<p class="h2 text-center pt-2 text-md-star ps-md-5">Siendo proactivos,responsables de nuestro propio destino</p>
+			</div>
+		</header>
+	</body>
+</html>

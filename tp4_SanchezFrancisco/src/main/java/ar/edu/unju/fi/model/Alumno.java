@@ -2,22 +2,25 @@ package ar.edu.unju.fi.model;
 
 import java.time.LocalDate;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Alumno {
-	private String dni;
+	private int dni;
 	private String nombre;
 	private String apellido;
 	private String email;
-	private int teléfono;
+	private String teléfono;
 	private LocalDate fechaNacimiento;
 	private String domicilio;
-	private String lu;
+	private Integer lu;
 	
 	public Alumno() {
 		
 	}
-	
-	public Alumno(String dni, String nombre, String apellido, String email, int teléfono, LocalDate fechaNacimiento,
-			String domicilio, String lu) {
+
+	public Alumno(int dni, String nombre, String apellido, String email, String teléfono, LocalDate fechaNacimiento,
+			String domicilio, Integer lu) {
 		this.dni = dni;
 		this.nombre = nombre;
 		this.apellido = apellido;
@@ -27,53 +30,68 @@ public class Alumno {
 		this.domicilio = domicilio;
 		this.lu = lu;
 	}
-	
-	public String getDni() {
+
+	public int getDni() {
 		return dni;
 	}
-	public void setDni(String dni) {
+
+	public void setDni(int dni) {
 		this.dni = dni;
 	}
+
 	public String getNombre() {
 		return nombre;
 	}
+
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
+
 	public String getApellido() {
 		return apellido;
 	}
+
 	public void setApellido(String apellido) {
 		this.apellido = apellido;
 	}
+
 	public String getEmail() {
 		return email;
 	}
+
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public int getTeléfono() {
+
+	public String getTeléfono() {
 		return teléfono;
 	}
-	public void setTeléfono(int teléfono) {
+
+	public void setTeléfono(String teléfono) {
 		this.teléfono = teléfono;
 	}
+
 	public LocalDate getFechaNacimiento() {
 		return fechaNacimiento;
 	}
+
 	public void setFechaNacimiento(LocalDate fechaNacimiento) {
 		this.fechaNacimiento = fechaNacimiento;
 	}
+
 	public String getDomicilio() {
 		return domicilio;
 	}
+
 	public void setDomicilio(String domicilio) {
 		this.domicilio = domicilio;
 	}
-	public String getLu() {
+
+	public Integer getLu() {
 		return lu;
 	}
-	public void setLu(String lu) {
+
+	public void setLu(Integer lu) {
 		this.lu = lu;
 	}
 	
