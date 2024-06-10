@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+	<head data-th-replace="~{/layouts/header :: head}"></head>
+	<body>
+		<div id="container-fluid">
+			<header data-th-replace="~{/layouts/header :: header}"></header>
+			<div class="row py-5 m">
+				<div class="row mb-5">
+					<h3 data-th-text="${edicion}?'Modificar Materia':'Nueva Materia'" class="text-center"></h3>
+				</div>
+				<div class="row">
+					<form data-th-action="${edicion}?@{/materia/modificar} : @{/materia/guardar}" th:object="${materia}" method="post">
+						<div class="row mb-3 justify-content-center">
+							<label for="codMateria" class="col-sm-12 col-lg-2 col-form-label text-lg-end">Código</label>
+							<div class="col-sm-12 col-lg-4">
+								<input type="number" class="form-control" id="codigo" th:field="*{codMateria}" th:disabled="${edicion}?true:false">
+								<input type="hidden" class="form-control" id="codigo" th:field="*{codMateria}" th:if="${edicion}">
+							</div>
+						</div>
+						
+						<div class="row mb-3 justify-content-center">
+							<label for="nombre" class="col-sm-12 col-lg-2 col-form-label text-lg-end">Nombre</label>
+							<div class="col-sm-12 col-lg-4">
+								<input type="text" class="form-control" id="nombre" th:field="*{nombre}">
+							</div>
+						</div>
+						
+						<div class="row mb-3 justify-content-center">
+							<label for="nombre" class="col-sm-12 col-lg-2 col-form-label text-lg-end">Curso</label>
+							<div class="col-sm-12 col-lg-4">
+								<input type="text" class="form-control" id="nombre" th:field="*{curso}">
+							</div>
+						</div>
+						
+						<div class="row mb-3 justify-content-center">
+							<label for="duracion" class="col-sm-12 col-lg-2 col-form-label text-lg-end">Cant.horas</label>
+							<div class="col-sm-12 col-lg-4">
+								<input type="number" class="form-control" id="duracion" th:field="*{cantidadHoras}">
+							</div>
+						</div>
+						
+						<div class="row mb-3 justify-content-center">
+							<label for="modalidad" class="col-sm-12 col-lg-2 col-form-label text-lg-end">Modalidad</label>
+							<div class="col-sm-12 col-lg-4">
+								<select class="form-select" id="modalidad" th:field="*{modalidad}">
+								  <option value=0 disabled selected>Seleccione una Modalidad</option>
+								  <option th:value="Virtual">Virtual</option>
+								  <option th:value="Presencial">Presencial</option>
+								  <option th:value="Mixta">Mixta</option>
+								</select>
+							</div>
+						</div>
+						
+						<div class="row mb-3 justify-content-center">
+							<label for="docente" class="col-sm-12 col-lg-2 col-form-label text-lg-end">Docente</label>
+							<div class="col-sm-12 col-lg-4">
+								<select class="form-select" id="docente" th:field="*{docente.legajo}">
+									<option value=0 disabled selected>Seleccione un Docente</option>
+	            					<option th:each="docente : ${docentes}" th:value="${docente.legajo}" th:text="${docente.nombre} + ' ' + ${docente.apellido}"></option>
+	       						</select>
+							</div>
+						</div>
+						
+						<div class="row mb-3 justify-content-center">
+							<label for="carrera" class="col-sm-12 col-lg-2 col-form-label text-lg-end">Carrera</label>
+							<div class="col-sm-12 col-lg-4">
+								<select class="form-select" id="carrera" th:field="*{carrera.codCarrera}">
+									<option value=0 disabled selected>Seleccione una Carrera</option>
+	            					<option th:each="carrera : ${carreras}" th:value="${carrera.codCarrera}" th:text="${carrera.nombre}"></option>
+	       						</select>
+							</div>
+						</div>	
+						
+						<div class="row mb-3 justify-content-center">
+							<div class="col-sm-12 col-lg-6 d-flex justify-content-center">
+								<span class="mx-5 text-center"><input type="submit" class="btn btn-primary" th:value="${edicion}?'Modificar' : 'Guardar'"></span>
+								<span class="mx-5 text-center"><a class="btn btn-primary" th:href="@{/materia/listado}">Volver</a></span>
+							</div>
+						</div>
+						
+					</form>
+				</div>
+			</div>
+			<footer data-th-replace="~{/layouts/footer :: footer}"></footer>
+		</div>
+		<script type="text/javascript" th:src="@{/webjars/bootstrap/js/bootstrap.bundle.min.js}"></script>
+	</body>
+</html>
